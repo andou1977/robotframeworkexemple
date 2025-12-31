@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2025-12-30T13:00:14.563663" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Framework-Example" source="C:\Users\GENIUS\IdeaProjects\robot-framework-example">
+<suite id="s1-s1" name="Tests" source="C:\Users\GENIUS\IdeaProjects\robot-framework-example\tests">
+<suite id="s1-s1-s1" name="Search" source="C:\Users\GENIUS\IdeaProjects\robot-framework-example\tests\search.robot">
+<test id="s1-s1-s1-t1" name="User can do a search from the home page" line="12">
+<kw name="Open Browser To Search Page" owner="search_page" type="SETUP">
+<kw name="Open Browser To Page" owner="common">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Chrome Browser To Page" owner="common">
+<kw name="Prepare Driver" owner="helpers">
+<msg time="2025-12-30T13:00:14.813780" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2025-12-30T13:00:15.939538" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-12-30T13:00:15.976999" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2025-12-30T13:00:16.009253" level="INFO">Driver [C:\Users\GENIUS\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<arg>${browser}</arg>
+<status status="PASS" start="2025-12-30T13:00:14.813780" elapsed="1.195473"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-30T13:00:16.009253" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001AAAC758850&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="0.000000"/>
+</kw>
+<arg>${headless}</arg>
+<arg>Call Method</arg>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size\=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--user-agent\=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-12-30T13:00:16.009253" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-12-30T13:00:16.009253" elapsed="1.232783"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-30T13:00:17.242036" elapsed="0.024226"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-12-30T13:00:17.267274" level="INFO">Opening url 'https://duckduckgo.com/'</msg>
+<arg>${page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-12-30T13:00:17.266262" elapsed="0.867473"/>
+</kw>
+<arg>${page}</arg>
+<status status="PASS" start="2025-12-30T13:00:14.813780" elapsed="3.320959"/>
+</kw>
+<arg>'${browser}' == 'chrome'</arg>
+<arg>Open Chrome Browser To Page</arg>
+<arg>${page}</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == 'firefox'</arg>
+<arg>Open Firefox Browser To Page</arg>
+<arg>${page}</arg>
+<arg>ELSE</arg>
+<arg>Fatal Error</arg>
+<arg>Incorrect Browser</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-12-30T13:00:14.813780" elapsed="3.320959"/>
+</kw>
+<arg>${search_page}</arg>
+<status status="PASS" start="2025-12-30T13:00:14.813780" elapsed="3.320959"/>
+</kw>
+<status status="PASS" start="2025-12-30T13:00:14.813780" elapsed="3.320959"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-30T13:00:18.135736" level="INFO">Typing text 'Robot Framework WebPage' into text field 'css:#searchbox_input'.</msg>
+<arg>${search_input}</arg>
+<arg>${search_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-30T13:00:18.134739" elapsed="0.154864"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-30T13:00:18.290591" level="INFO">Clicking element 'css:#searchbox_homepage [type='submit']'.</msg>
+<arg>${search_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-30T13:00:18.289603" elapsed="0.062001"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${result_links}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-30T13:00:18.352614" elapsed="1.829229"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-12-30T13:00:20.239631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="results.png"&gt;&lt;img src="results.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>results.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-12-30T13:00:20.182844" elapsed="0.056787"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-30T13:00:20.239631" elapsed="2.161492"/>
+</kw>
+<status status="PASS" start="2025-12-30T13:00:14.813780" elapsed="7.587343"/>
+</test>
+<doc>Home Page Search Tests</doc>
+<status status="PASS" start="2025-12-30T13:00:14.584725" elapsed="7.816398"/>
+</suite>
+<status status="PASS" start="2025-12-30T13:00:14.584725" elapsed="7.816398"/>
+</suite>
+<status status="PASS" start="2025-12-30T13:00:14.568687" elapsed="7.832436"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot-Framework-Example" id="s1" pass="1" fail="0" skip="0">Robot-Framework-Example</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Robot-Framework-Example.Tests</stat>
+<stat name="Search" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot-Framework-Example.Tests.Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

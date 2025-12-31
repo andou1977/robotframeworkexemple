@@ -1,0 +1,20 @@
+#robotframework==7.3.2
+#robotframework-seleniumlibrary==6.7.1
+#pyyaml==6.0.2
+#webdriver-manager==4.0.2
+
+
+
+#pour quand j'essais en mode local sur mon pc
+
+robotframework
+robotframework-seleniumlibrary
+selenium
+robotframework-requests
+robotframework-databaselibrary
+pymysql
+robotframework-datadriver
+robotframework-mainframe3270
+rpaframework
+jsonschema
+requests
