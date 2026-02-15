@@ -6,7 +6,7 @@ Resource    ../resources/common.robot
 *** Variables ***
 ${search_page}          ${url}
 ${search_input}         css:#searchbox_input
-${search_button}        css:#searchbox_homepage [type='submit']
+${search_button}        css:.search-input_searchText__T0V7_
 
 *** Keywords ***
 

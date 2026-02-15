@@ -13,6 +13,6 @@ ${search_textandou}      Robot Framework WebPage
 Faire une recherche
    Open Browser To Page    ${serachandou}
    Input Text  ${search_input}    ${search_textandou}
-   Click Element   ${search_button}
+   Press Keys    ${search_input}    ENTER
    Wait Until Page Contains    ${andounow}
    Close Browser
